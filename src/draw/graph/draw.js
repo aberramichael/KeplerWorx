@@ -2,7 +2,7 @@ import React from 'react';
 import { select, selectAll } from 'd3-selection';
 import { transition } from 'd3-transition';
 
-class Line extends React.Component {
+class Draw extends React.Component {
   constructor() {
     super();
     this.ref = React.createRef();
@@ -52,4 +52,4 @@ class Line extends React.Component {
   }
 }
 
-export default Line;
+export default Draw;

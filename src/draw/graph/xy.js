@@ -1,7 +1,7 @@
 import React from 'react';
-import Axis from './axis';
+import Graph from './graph';
 
-const XYAxis = ({ xScale, yScale, height }) => {
+const XY = ({ xScale, yScale, height }) => {
   const xSettings = {
     scale: xScale,
     orient: 'bottom',
@@ -14,11 +14,11 @@ const XYAxis = ({ xScale, yScale, height }) => {
     ticks: 6,
   };
   return (
-    <g className="axis-group">
-      <Axis {...xSettings} />
-      <Axis {...ySettings} />
+    <g className="graph-group">
+      <Graph {...xSettings} />
+      <Graph {...ySettings} />
     </g>
   );
 };
 
-export default XYAxis;
+export default XY;
