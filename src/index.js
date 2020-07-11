@@ -4,8 +4,8 @@ import { scaleLinear, scaleBand } from 'd3-scale';
 import { line, curveMonotoneX } from 'd3-shape';
 import { extent } from 'd3-array';
 import { transition } from 'd3-transition';
-import XYAxis from './draw/graph/xy';
-import Line from './draw/graph/draw';
+import XY from './draw/graph/xy';
+import Draw from './draw/graph/draw';
 
 
 class App extends Component {
@@ -58,15 +58,15 @@ class App extends Component {
 
     return (
       <div>
-       
+       <p> KeplerWorx </p>
         <svg
           className="keplerChart"
           width={width + margins.left + margins.right}
           height={height + margins.top + margins.bottom}
         >
           <g transform={`translate(${margins.left}, ${margins.top})`}>
-            <XYAxis {...{ xScale, yScale, height, ticks, t }} />
-            <Line data={data} xScale={xScale} yScale={yScale} lineGenerator={lineGenerator} width={width} height={height} />
+            <XY {...{ xScale, yScale, height, ticks, t }} />
+            <Draw data={data} xScale={xScale} yScale={yScale} lineGenerator={lineGenerator} width={width} height={height} />
           </g>
         </svg>
       </div>
